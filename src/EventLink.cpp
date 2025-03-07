@@ -39,7 +39,7 @@ class $modify(EventPopup, SetupEventLinkPopup) {
         return true;
     }
 
-    void createSidebar() {
+    void createSidebar(float dt) {
         auto layer = this->getChildByType<CCLayer>(0);
         auto buttonMenu = layer->getChildByType<CCMenu>(0);
         if (mod->getSettingValue<bool>("event-show-sidebar")) {
