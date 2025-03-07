@@ -1,0 +1,231 @@
+{
+	"geode": "4.2.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074"
+	},
+	"id": "nwo5.editoruiutils",
+	"name": "Editor UI Utils",
+	"version": "v1.0.0",
+	"developer": "Nwo5",
+	"description": "",
+	"tags": ["enhancement", "bugfix", "editor", "offline", "interface"],
+	"resources": {
+		"sprites": [
+			"resources/*.png"
+		]
+	},
+	"settings": {
+		"static-camera-title": {
+			"type": "title",
+			"name": "Static Camera"
+		},
+		"static-camera-enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"default": true
+		},
+		"static-camera-follow-fix": {
+			"type": "bool",
+			"name": "Follow Fix Button",
+			"default": true
+		},
+		"static-camera-close": {
+			"type": "bool",
+			"name": "Close On Follow Fix",
+			"default": true,
+			"enable-if": "static-camera-enabled && static-camera-follow-fix"
+		},
+		"static-camera-deselect": {
+			"type": "bool",
+			"name": "Deselect On Follow Fix",
+			"default": true,
+			"enable-if": "static-camera-enabled && static-camera-follow-fix"
+		},
+		"object-options-title": {
+			"type": "title",
+			"name": "Object Options"
+		},
+		"object-options-enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"default": true
+		},
+		"object-options-text-input-length": {
+			"type": "bool",
+			"name": "Text Length Bypass",
+			"default": true,
+			"enable-if": "object-options-enabled"
+		},
+		"object-options-auto-freemode": {
+			"type": "bool",
+			"name": "Auto Freemove",
+			"default": true,
+			"enable-if": "object-options-enabled"
+		},
+		"object-options-detail-mode": {
+			"type": "bool",
+			"name": "Detail Mode Shortcut",
+			"description": "When clicking the right side of the edit objects button, the color will automatically be set to detail color. Suggestion by ItsRainbow",
+			"default": false,
+			"enable-if": "object-options-enabled"
+		},
+		"gradient-title": {
+			"type": "title",
+			"name": "Gradient"
+		},
+		"gradient-enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"default": true
+		},
+		"gradient-create-points": {
+			"type": "bool",
+			"name": "Create Points",
+			"default": true,
+			"enable-if": "gradient-enabled"
+		},
+		"gradient-point-id": {
+			"type": "int",
+			"name": "Point ID",
+			"default": 3809,
+			"min": 1,
+			"max": 4539,
+			"enable-if": "gradient-enabled && gradient-create-points"
+		},
+		"gradient-close": {
+			"type": "bool",
+			"name": "Close On Create Points",
+			"default": true,
+			"enable-if": "gradient-enabled && gradient-create-points"
+		},
+		"gradient-deselect": {
+			"type": "bool",
+			"name": "Deselect On Create Points",
+			"default": true,
+			"enable-if": "gradient-enabled && gradient-create-points"
+		},
+		"event-title": {
+			"type": "title",
+			"name": "Event Link"
+		},
+		"event-enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"default": true
+		},
+		"event-edit-text": {
+			"type": "bool",
+			"name": "New Text",
+			"default": true,
+			"enable-if": "event-enabled"
+		},
+		"event-sidebar": {
+			"type": "bool",
+			"name": "Sidebar",
+			"default": true,
+			"enable-if": "event-enabled"
+		},
+		"event-show-sidebar": {
+			"type": "bool",
+			"name": "Show Sidebar",
+			"default": true,
+			"enable-if": "event-enabled && event-sidebar"
+		},
+		"event-sidebar-one": {
+			"type": "int",
+			"name": "Sidebar Event ID 1",
+			"default": 69,
+			"min": 1,
+			"max": 78,
+			"enable-if": "event-enabled && event-sidebar"
+		},
+		"event-sidebar-two": {
+			"type": "int",
+			"name": "Sidebar Event ID 2",
+			"default": 70,
+			"min": 1,
+			"max": 78,
+			"enable-if": "event-enabled && event-sidebar"
+		},
+		"event-sidebar-three": {
+			"type": "int",
+			"name": "Sidebar Event ID 3",
+			"default": 71,
+			"min": 1,
+			"max": 78,
+			"enable-if": "event-enabled && event-sidebar"
+		},
+		"event-sidebar-four": {
+			"type": "int",
+			"name": "Sidebar Event ID 4",
+			"default": 72,
+			"min": 1,
+			"max": 78,
+			"enable-if": "event-enabled && event-sidebar"
+		},
+		"event-sidebar-five": {
+			"type": "int",
+			"name": "Sidebar Event ID 5",
+			"default": 73,
+			"min": 1,
+			"max": 78,
+			"enable-if": "event-enabled && event-sidebar"
+		},
+		"event-sidebar-six": {
+			"type": "int",
+			"name": "Sidebar Event ID 6",
+			"default": 74,
+			"min": 1,
+			"max": 78,
+			"enable-if": "event-enabled && event-sidebar"
+		},
+		"event-sidebar-seven": {
+			"type": "int",
+			"name": "Sidebar Event ID 7",
+			"default": 12,
+			"min": 1,
+			"max": 78,
+			"enable-if": "event-enabled && event-sidebar"
+		},
+		"event-sidebar-eight": {
+			"type": "int",
+			"name": "Sidebar Event ID 8",
+			"default": 8,
+			"min": 1,
+			"max": 78,
+			"enable-if": "event-enabled && event-sidebar"
+		},
+		"spawn-title": {
+			"type": "title",
+			"name": "Spawn"
+		},
+		"spawn-enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"default": true
+		},
+		"spawn-auto-spawn": {
+			"type": "bool",
+			"name": "Auto Spawn",
+			"default": true,
+			"enable-if": "spawn-enabled"
+		},
+		"timewarp-title": {
+			"type": "title",
+			"name": "Timewarp"
+		},
+		"timewarp-enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"default": true
+		},
+		"timewarp-easing": {
+			"type": "bool",
+			"name": "Timewarp Easing",
+			"default": true,
+			"enable-if": "timewarp-enabled"
+		}
+	}
+}
