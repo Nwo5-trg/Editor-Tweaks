@@ -47,11 +47,13 @@ class $modify(EditUI, EditorUI) {
         if (mod->getSettingValue<bool>("object-options-detail-mode")) {
             auto menu = CCMenu::create();
             menu->setPosition(ccp(0, 0));
-            this->m_editObjectBtn->getParent()->addChild(menu);
+            menu->setContentSize(CCSize(0, 0));
+            menu->setID("open-detail-edit-object-menu");
+            this->addChild(menu);
             auto button = CCMenuItemSpriteExtra::create(CCSprite::create(), this, nullptr);
             button->setID("open-detail-edit-object-button");
             button->setContentSize(CCSize(18, 28));
-            button->setPosition(ccp(197, 102));
+            button->setPosition(ccp(553, 224));
             menu->addChild(button);
         }
         return true;
@@ -60,14 +62,7 @@ class $modify(EditUI, EditorUI) {
     void openDetailMenu() {
         this->m_editObjectBtn->activate();
         if (auto customLayer = CCDirector::sharedDirector()->getRunningScene()->getChildByType<CustomizeObjectLayer>(0)) {
-            if (auto button = customLayer->m_baseButton->getParent()->getChildByType<CCMenuItemSpriteExtra>(2)) {
-                button->activate();
-                if (auto settingsPopup = CCDirector::sharedDirector()->getRunningScene()->getChildByType<CustomizeObjectSettingsPopup>(0)) {
-                    auto toggler = settingsPopup->getChildByType<CCLayer>(0)->getChildByType<CCMenu>(0)->getChildByType<CCMenuItemToggler>(2);
-                    if (!(toggler->isToggled())) toggler->activate();
-                    settingsPopup->onClose(nullptr);
-                }
-            }
+            if (customLayer->m_detailButton->isVisible()) customLayer->m_detailButton->activate();
         }
     }
 };

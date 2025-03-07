@@ -7,7 +7,7 @@
 	},
 	"id": "nwo5.editortweaks",
 	"name": "Editor Tweaks",
-	"version": "v1.0.0",
+	"version": "v0.1.0-beta.2",
 	"developer": "Nwo5",
 	"description": "",
 	"tags": ["enhancement", "bugfix", "editor", "offline", "interface"],
@@ -67,7 +67,7 @@
 		"object-options-detail-mode": {
 			"type": "bool",
 			"name": "Detail Mode Shortcut",
-			"description": "When clicking the right side of the edit objects button, the color will automatically be set to detail color. Suggestion by ItsRainbow",
+			"description": "When clicking the right side of the edit objects button, the color will automatically be set to detail color. Suggestion by Nightcat",
 			"default": false,
 			"enable-if": "object-options-enabled"
 		},
